@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;0;700&display=swap");
+
+:root {
+  --clr-bg: #dbdfe3;
+  --clr-text-primary: #0d2464;
+  --clr-text-secondary: #666764;
+  --border: #90919b;
+  --clr-after-bg: #fab564;
+  --clr-button: #3b66b8;
+  --border-round: 1rem;
+  --text-light: 300;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: poppins;
+  position: relative;
+}
+.product-info {
+  background-color: white;
+  width: 40rem;
+  height: 30rem;
+  display: flex;
+  border-radius: var(--border-round);
+  padding: 1rem;
+  overflow: hidden;
+  gap: 0.5rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.image {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.image img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  margin-top: 2.1rem;
+}
+.info {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  flex: 1;
+  padding-top: 1rem;
+  padding-right: 0.8rem;
+  margin-top: 2rem;
+}
+.info .shipping {
+  background-color: var(--clr-text-primary);
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  color: white;
+  width: max-content;
+}
+.info h1 {
+  font-size: 1.9rem;
+  color: var(--clr-text-primary);
+}
+small {
+  text-decoration: line-through;
+  margin-top: 1rem;
+}
+strong {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-top: -0.5rem;
+}
+.offer-valid {
+  font-size: 0.8rem;
+  color: var(--clr-text-secondary);
+  margin-bottom: 1rem;
+}
+.to-cart {
+  padding: 0.8rem 1rem;
+  border-radius: 0.3rem;
+  color: white;
+  background-color: var(--clr-button);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
+}
+.to-cart:hover {
+  background-color: transparent;
+  color: #0d2464;
+  border: 1px solid var(--border);
+}
+.pcs {
+  margin-top: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.pcs .dot {
+  margin-left: 1.5rem;
+}
+.pcs .dot::after {
+  position: absolute;
+  top: 0.2rem;
+  left: -0.1rem;
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+
+  background-color: rgb(26, 155, 26);
+}
+.add-to {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.add-to button {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+.add-to button:hover {
+  background-color: var(--clr-button);
+  color: white;
+}
+.add-to button:hover i {
+  color: white;
+}
+.add-to button i {
+  color: rgb(68, 67, 67);
+  margin-right: 1rem;
+  margin-left: -1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .product-info {
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .product-info {
+    flex-direction: row;
+    width: 80%;
+  }
+}
